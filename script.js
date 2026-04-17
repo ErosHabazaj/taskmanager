@@ -18,12 +18,15 @@ function save() {
 }
 
 // ── Core: addTask ──────────────────────────────────────
+
 function addTask(text, priority = 'medium') {
+
   const task = {
     id:        Date.now(),
     text:      text.trim(),
     priority,
     completed: false,
+
     createdAt: new Date().toISOString()
   };
   tasks.unshift(task);
